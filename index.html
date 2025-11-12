@@ -5,67 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empowering Youth in the Era of Disruption</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Empowering Youth in the Era of Disruption</h1>
-        <p>Navigating challenges, building skills, and inspiring change.</p>
+        <nav>
+            <div class="logo">EmpowerYouth</div>
+            <ul class="nav-links">
+                <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#inspiring-voices">Inspiring Voices</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>Empowering Youth in the Era of Disruption</h1>
+            <p>Navigate challenges, build skills, and inspire change in a rapidly evolving world.</p>
+        </div>
     </header>
 
     <section id="challenges">
-        <h2>The Era of Disruption: Challenges for Youth</h2>
-        <p>In a world of rapid technological change, AI, and global shifts, youth face job insecurity, skill gaps, and uncertainty. But with the right tools, you can thrive.</p>
-        <img src="https://source.unsplash.com/800x400/?technology,disruption" alt="Disruption Era">
+        <div class="container">
+            <h2>The Era of Disruption: Challenges for Youth</h2>
+            <p>In a world of rapid technological change, AI, and global shifts, youth face job insecurity, skill gaps, and uncertainty. But with the right tools, you can thrive.</p>
+            <img src="https://source.unsplash.com/800x400/?technology,disruption" alt="Disruption Era" class="section-img">
+        </div>
     </section>
 
     <section id="solutions">
-        <h2>Solutions and Practical Guides</h2>
-        <p>Empower yourself with actionable steps to build resilience and independence.</p>
-        <div class="cards">
-            <div class="card" onclick="toggleCard(this)">
-                <h3>Skill Development</h3>
-                <p>Learn digital skills like coding and data analysis.</p>
-                <div class="details">Start with free platforms like Coursera or Khan Academy. Practice daily to build confidence.</div>
-            </div>
-            <div class="card" onclick="toggleCard(this)">
-                <h3>Adaptability</h3>
-                <p>Embrace change through continuous learning.</p>
-                <div class="details">Join online communities, attend webinars, and network with innovators.</div>
-            </div>
-            <div class="card" onclick="toggleCard(this)">
-                <h3>Entrepreneurship</h3>
-                <p>Turn ideas into opportunities.</p>
-                <div class="details">Use tools like business planning apps and seek mentorship from successful entrepreneurs.</div>
+        <div class="container">
+            <h2>Solutions and Practical Guides</h2>
+            <p>Empower yourself with actionable steps to build resilience and independence.</p>
+            <div class="cards-grid">
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Skill Development</h3>
+                    <p>Learn digital skills like coding and data analysis.</p>
+                    <div class="details">Start with free platforms like Coursera or Khan Academy. Practice daily to build confidence.</div>
+                </div>
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Adaptability</h3>
+                    <p>Embrace change through continuous learning.</p>
+                    <div class="details">Join online communities, attend webinars, and network with innovators.</div>
+                </div>
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Entrepreneurship</h3>
+                    <p>Turn ideas into opportunities.</p>
+                    <div class="details">Use tools like business planning apps and seek mentorship from successful entrepreneurs.</div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="inspiring-voices">
-        <h2>Inspiring Voices</h2>
-        <p>Real stories of youth who adapted and succeeded.</p>
-        <div class="carousel">
-            <div class="slide active">
-                <img src="https://source.unsplash.com/400x300/?young,entrepreneur" alt="Young Entrepreneur">
-                <h4>Alex: From Startup to Success</h4>
-                <p>Alex built a tech startup at 22, adapting to AI trends.</p>
+        <div class="container">
+            <h2>Inspiring Voices</h2>
+            <p>Real stories of youth who adapted and succeeded.</p>
+            <div class="carousel">
+                <div class="slide active">
+                    <img src="https://source.unsplash.com/400x300/?young,entrepreneur" alt="Young Entrepreneur">
+                    <h4>Alex: From Startup to Success</h4>
+                    <p>Alex built a tech startup at 22, adapting to AI trends.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://source.unsplash.com/400x300/?youth,innovation" alt="Youth Innovator">
+                    <h4>Maya: Innovating Education</h4>
+                    <p>Maya created online learning tools during the pandemic.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://source.unsplash.com/400x300/?young,leader" alt="Young Leader">
+                    <h4>Jordan: Leading Change</h4>
+                    <p>Jordan led a community initiative for digital literacy.</p>
+                </div>
             </div>
-            <div class="slide">
-                <img src="https://source.unsplash.com/400x300/?youth,innovation" alt="Youth Innovator">
-                <h4>Maya: Innovating Education</h4>
-                <p>Maya created online learning tools during the pandemic.</p>
-            </div>
-            <div class="slide">
-                <img src="https://source.unsplash.com/400x300/?young,leader" alt="Young Leader">
-                <h4>Jordan: Leading Change</h4>
-                <p>Jordan led a community initiative for digital literacy.</p>
+            <div class="carousel-controls">
+                <button onclick="prevSlide()">Prev</button>
+                <button onclick="nextSlide()">Next</button>
             </div>
         </div>
-        <button onclick="prevSlide()">Prev</button>
-        <button onclick="nextSlide()">Next</button>
     </section>
 
     <footer>
-        <p>&copy; 2023 Empowering Youth. Stay empowered, stay ahead.</p>
+        <div class="container">
+            <p>&copy; 2023 Empowering Youth. Stay empowered, stay ahead.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
