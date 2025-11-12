@@ -4,7 +4,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #0d111c; /* Warna latar belakang gelap */
-    color: #e5e7eb;
+    color: #e5e7eb; /* Warna teks default diatur menjadi putih cerah (bukan hitam) */
     overflow-x: hidden;
 }
 
