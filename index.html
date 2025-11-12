@@ -1,99 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empowering Youth in the Era of Disruption</title>
+    <title>Pemberdayaan Pemuda di Era Disrupsi</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Link Custom Styles -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">EmpowerYouth</div>
-            <ul class="nav-links">
-                <li><a href="#challenges">Challenges</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#inspiring-voices">Inspiring Voices</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-        <div class="hero">
-            <h1>Empowering Youth in the Era of Disruption</h1>
-            <p>Navigate challenges, build skills, and inspire change in a rapidly evolving world.</p>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold accent-text">IGNITE.</div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#tantangan" class="hover:accent-text transition duration-300">Tantangan</a>
+                <a href="#solusi" class="hover:accent-text transition duration-300">4 Pilar Sukses</a>
+                <a href="#inspirasi" class="hover:accent-text transition duration-300">Suara Inspiratif</a>
+                <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">Mulai Sekarang</button>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900/95">
+            <a href="#tantangan" class="block px-4 py-2 hover:accent-text">Tantangan</a>
+            <a href="#solusi" class="block px-4 py-2 hover:accent-text">4 Pilar Sukses</a>
+            <a href="#inspirasi" class="block px-4 py-2 hover:accent-text">Suara Inspiratif</a>
+            <button class="w-full text-left px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700 transition duration-300">Mulai Sekarang</button>
         </div>
     </header>
 
-    <section id="challenges">
-        <div class="container">
-            <h2>The Era of Disruption: Challenges for Youth</h2>
-            <p>In a world of rapid technological change, AI, and global shifts, youth face job insecurity, skill gaps, and uncertainty. But with the right tools, you can thrive.</p>
-            <img src="https://source.unsplash.com/800x400/?technology,disruption" alt="Disruption Era" class="section-img">
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center p-8 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/0d111c/4f46e5?text=Future+of+Youth');">
+            <div class="bg-black/60 p-8 rounded-xl shadow-2xl fade-in-section">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                    Pemberdayaan Pemuda di <span class="accent-text">Era Disrupsi</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Membentuk Masa Depan, Bukan Sekadar Mengikutinya. Dapatkan solusi dan panduan praktis untuk sukses.
+                </p>
+                <a href="#solusi" class="inline-block px-10 py-4 bg-indigo-600 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                    Jelajahi Solusinya
+                </a>
+            </div>
+        </section>
 
-    <section id="solutions">
-        <div class="container">
-            <h2>Solutions and Practical Guides</h2>
-            <p>Empower yourself with actionable steps to build resilience and independence.</p>
-            <div class="cards-grid">
-                <div class="card" onclick="toggleCard(this)">
-                    <h3>Skill Development</h3>
-                    <p>Learn digital skills like coding and data analysis.</p>
-                    <div class="details">Start with free platforms like Coursera or Khan Academy. Practice daily to build confidence.</div>
+        <!-- 2. The Challenge (Alur Cerita) -->
+        <section id="tantangan" class="py-20 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-4xl font-bold accent-text">Apa Itu Disrupsi?</h2>
+                <p class="text-lg text-gray-400 mt-3">Perubahan cepat yang mengubah cara kita hidup, bekerja, dan berinteraksi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Card 1: Kecepatan -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl hover:shadow-indigo-500/50 fade-in-section" style="transition-delay: 0.1s;">
+                    <h3 class="text-2xl font-semibold mb-3 accent-text">1. Kecepatan Eksponensial</h3>
+                    <p class="text-gray-400">Teknologi baru (AI, IoT, Web3) muncul dan berkembang jauh lebih cepat dari sebelumnya. Siapa yang tidak beradaptasi akan tertinggal.</p>
                 </div>
-                <div class="card" onclick="toggleCard(this)">
-                    <h3>Adaptability</h3>
-                    <p>Embrace change through continuous learning.</p>
-                    <div class="details">Join online communities, attend webinars, and network with innovators.</div>
+                <!-- Card 2: Ketidakpastian -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl hover:shadow-indigo-500/50 fade-in-section" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-semibold mb-3 accent-text">2. Ketidakpastian Karier</h3>
+                    <p class="text-gray-400">Pekerjaan tradisional diotomatisasi, menuntut kita untuk terus belajar dan mengembangkan *skill* yang tidak bisa digantikan mesin.</p>
                 </div>
-                <div class="card" onclick="toggleCard(this)">
-                    <h3>Entrepreneurship</h3>
-                    <p>Turn ideas into opportunities.</p>
-                    <div class="details">Use tools like business planning apps and seek mentorship from successful entrepreneurs.</div>
+                <!-- Card 3: Tekanan Mental -->
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl hover:shadow-indigo-500/50 fade-in-section" style="transition-delay: 0.3s;">
+                    <h3 class="text-2xl font-semibold mb-3 accent-text">3. Tekanan Global</h3>
+                    <p class="text-gray-400">Kompetisi bukan lagi lokal, tetapi global. Membutuhkan mental yang tangguh dan kemauan untuk berkolaborasi lintas batas.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="inspiring-voices">
-        <div class="container">
-            <h2>Inspiring Voices</h2>
-            <p>Real stories of youth who adapted and succeeded.</p>
-            <div class="carousel">
-                <div class="slide active">
-                    <img src="https://source.unsplash.com/400x300/?young,entrepreneur" alt="Young Entrepreneur">
-                    <h4>Alex: From Startup to Success</h4>
-                    <p>Alex built a tech startup at 22, adapting to AI trends.</p>
+        <!-- 3. The Solution (4 Pilar Sukses - Interaktif) -->
+        <section id="solusi" class="py-20 md:py-32 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-section">
+                    <h2 class="text-4xl font-bold accent-text">4 Pilar Sukses di Era Disrupsi</h2>
+                    <p class="text-lg text-gray-400 mt-3">Panduan praktis untuk menumbuhkan kemandirian dan kesiapan Anda.</p>
                 </div>
-                <div class="slide">
-                    <img src="https://source.unsplash.com/400x300/?youth,innovation" alt="Youth Innovator">
-                    <h4>Maya: Innovating Education</h4>
-                    <p>Maya created online learning tools during the pandemic.</p>
+
+                <div class="grid md:grid-cols-4 gap-6">
+                    <!-- Navigasi / Kartu Pilihan -->
+                    <div id="card-creative" data-pillar="creative" class="pillar-card p-6 rounded-xl shadow-lg bg-gray-800 cursor-pointer text-center card-active">
+                        <h4 class="text-xl font-bold">Kreativitas & Inovasi</h4>
+                    </div>
+                    <div id="card-resilience" data-pillar="resilience" class="pillar-card p-6 rounded-xl shadow-lg bg-gray-800 cursor-pointer text-center card-inactive hover:card-active">
+                        <h4 class="text-xl font-bold">Ketahanan Mental</h4>
+                    </div>
+                    <div id="card-digital" data-pillar="digital" class="pillar-card p-6 rounded-xl shadow-lg bg-gray-800 cursor-pointer text-center card-inactive hover:card-active">
+                        <h4 class="text-xl font-bold">Literasi Digital</h4>
+                    </div>
+                    <div id="card-collaboration" data-pillar="collaboration" class="pillar-card p-6 rounded-xl shadow-lg bg-gray-800 cursor-pointer text-center card-inactive hover:card-active">
+                        <h4 class="text-xl font-bold">Kolaborasi Jaringan</h4>
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="https://source.unsplash.com/400x300/?young,leader" alt="Young Leader">
-                    <h4>Jordan: Leading Change</h4>
-                    <p>Jordan led a community initiative for digital literacy.</p>
+
+                <!-- Konten Detail (Menggunakan animasi fade) -->
+                <div id="pillar-content-container" class="mt-12 bg-gray-800 p-8 rounded-xl shadow-2xl fade-in-section">
+                    <!-- Konten Kreativitas (Default) -->
+                    <div id="content-creative" class="pillar-content">
+                        <h3 class="text-3xl font-bold accent-text mb-4">Kreativitas & Inovasi (Mindset Solusi)</h3>
+                        <p class="text-gray-300 text-lg">
+                            Di dunia yang berubah cepat, kemampuan untuk menghasilkan ide baru dan memecahkan masalah dengan cara unik adalah mata uang terpenting. Ini bukan hanya tentang seni, tetapi tentang pola pikir.
+                        </p>
+                        <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
+                            <li><span class="font-semibold text-white">Panduan Praktis:</span> Latih *design thinking* dan selalu tanyakan "bagaimana jika...". Jangan takut gagal.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Konten Ketahanan (Tersembunyi) -->
+                    <div id="content-resilience" class="pillar-content hidden">
+                        <h3 class="text-3xl font-bold accent-text mb-4">Ketahanan Mental (Growth Mindset)</h3>
+                        <p class="text-gray-300 text-lg">
+                            Disrupsi pasti membawa kegagalan dan penolakan. Ketahanan mental (resilience) adalah kemampuan untuk bangkit kembali, belajar dari kesalahan, dan tetap optimis.
+                        </p>
+                        <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
+                            <li><span class="font-semibold text-white">Panduan Praktis:</span> Terapkan teknik manajemen stres dan selalu mencari umpan balik konstruktif.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Konten Digital (Tersembunyi) -->
+                    <div id="content-digital" class="pillar-content hidden">
+                        <h3 class="text-3xl font-bold accent-text mb-4">Literasi Digital (Menguasai Alat)</h3>
+                        <p class="text-gray-300 text-lg">
+                            Pemahaman dasar tentang AI, data, dan keamanan siber adalah wajib. Kita harus menjadi pengguna teknologi yang cerdas dan etis, bukan sekadar konsumen pasif.
+                        </p>
+                        <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
+                            <li><span class="font-semibold text-white">Panduan Praktis:</span> Ambil kursus online tentang analisis data dan bias AI. Lindungi jejak digital Anda.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Konten Kolaborasi (Tersembunyi) -->
+                    <div id="content-collaboration" class="pillar-content hidden">
+                        <h3 class="text-3xl font-bold accent-text mb-4">Kolaborasi Jaringan (Membangun Ekosistem)</h3>
+                        <p class="text-gray-300 text-lg">
+                            Tidak ada yang bisa sukses sendiri di era ini. Membangun jaringan yang kuat dan kemampuan untuk bekerja dalam tim multidisiplin adalah kunci untuk memperluas dampak.
+                        </p>
+                        <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
+                            <li><span class="font-semibold text-white">Panduan Praktis:</span> Hadiri *workshop* dan acara *networking*. Berikan nilai kepada komunitas Anda terlebih dahulu.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-controls">
-                <button onclick="prevSlide()">Prev</button>
-                <button onclick="nextSlide()">Next</button>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Empowering Youth. Stay empowered, stay ahead.</p>
-        </div>
+        <!-- 4. Inspiring Voices (Carousel/Slider) -->
+        <section id="inspirasi" class="py-20 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-4xl font-bold accent-text">Suara Inspiratif</h2>
+                <p class="text-lg text-gray-400 mt-3">Kisah nyata para pemuda yang berhasil menaklukkan disrupsi.</p>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative">
+                <div id="carousel" class="flex overflow-hidden space-x-6 scroll-smooth snap-x snap-mandatory">
+                    <!-- Voice 1 -->
+                    <div class="min-w-full md:min-w-[48%] lg:min-w-[32%] snap-center p-8 bg-gray-800 rounded-xl shadow-xl border-t-4 accent-border transform hover:scale-[1.02] transition duration-500">
+                        <p class="text-4xl mb-4 text-indigo-500">"</p>
+                        <blockquote class="text-gray-300 italic">"Saya mengubah kegagalan proyek pertama saya menjadi algoritma yang kini digunakan ribuan UMKM. Kegagalan adalah data!"</blockquote>
+                        <div class="mt-6 flex items-center">
+                            <img src="https://placehold.co/60x60/4f46e5/ffffff?text=JN" alt="Foto Jono" class="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-indigo-500">
+                            <div>
+                                <p class="font-bold text-white">Jono N.</p>
+                                <p class="text-sm text-gray-400">Pendiri Tech-Startup AI</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice 2 -->
+                    <div class="min-w-full md:min-w-[48%] lg:min-w-[32%] snap-center p-8 bg-gray-800 rounded-xl shadow-xl border-t-4 accent-border transform hover:scale-[1.02] transition duration-500">
+                        <p class="text-4xl mb-4 text-indigo-500">"</p>
+                        <blockquote class="text-gray-300 italic">"Pendidikan formal tidak cukup. Saya habiskan waktu di platform belajar global. Inisiatif mandiri adalah kunci."</blockquote>
+                        <div class="mt-6 flex items-center">
+                            <img src="https://placehold.co/60x60/4f46e5/ffffff?text=AR" alt="Foto Ayu" class="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-indigo-500">
+                            <div>
+                                <p class="font-bold text-white">Ayu R.</p>
+                                <p class="text-sm text-gray-400">Content Creator & Educator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice 3 -->
+                    <div class="min-w-full md:min-w-[48%] lg:min-w-[32%] snap-center p-8 bg-gray-800 rounded-xl shadow-xl border-t-4 accent-border transform hover:scale-[1.02] transition duration-500">
+                        <p class="text-4xl mb-4 text-indigo-500">"</p>
+                        <blockquote class="text-gray-300 italic">"Ketakutan terbesar saya adalah stagnasi. Saya pastikan setiap tahun ada skill baru yang saya kuasai, walau sedikit."</blockquote>
+                        <div class="mt-6 flex items-center">
+                            <img src="https://placehold.co/60x60/4f46e5/ffffff?text=BD" alt="Foto Bima" class="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-indigo-500">
+                            <div>
+                                <p class="font-bold text-white">Bima D.</p>
+                                <p class="text-sm text-gray-400">Konsultan Keberlanjutan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button onclick="scrollCarousel(-1)" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 p-3 rounded-full shadow-lg hover:bg-indigo-600 transition duration-300 z-10 hidden md:block">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button onclick="scrollCarousel(1)" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 p-3 rounded-full shadow-lg hover:bg-indigo-600 transition duration-300 z-10 hidden md:block">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer & CTA -->
+    <footer class="accent-bg py-16 text-center">
+        <h3 class="text-3xl font-bold mb-4 text-white">Siap Mengambil Kendali Masa Depan Anda?</h3>
+        <p class="text-lg mb-8 text-indigo-200">Bergabunglah dengan gerakan pemuda yang berani menghadapi dan membentuk era disrupsi.</p>
+        <button class="px-8 py-4 bg-white text-indigo-600 text-xl font-bold rounded-full shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+            Mulai Transformasi Anda!
+        </button>
+        <p class="mt-12 text-sm text-indigo-200">&copy; 2024 IGNITE. Dibuat dengan semangat Pemberdayaan Pemuda.</p>
     </footer>
 
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
